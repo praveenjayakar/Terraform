@@ -108,5 +108,12 @@ kubectl taint nodes localhost node-role.kubernetes.io/control-plane:NoSchedule-
 
 kubectl get nodes
 
+sleep 30
+
+echo "alias k=kubectl" >> ~/.bashrc
+
+source ~/.bashrc
+
+k get nodes -o wide
 
 echo "Congrats man"
